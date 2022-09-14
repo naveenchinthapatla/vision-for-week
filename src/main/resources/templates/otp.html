@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>One Time Password - Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/otp-styles.css}">
+    <script type="text/javascript" th:src="@{/js/otp.js}"></script>
+  </head>
+
+  <body>
+    <h1>Email Verification</h1>
+    <div align="center">
+    	<p>A Six-Digit OTP is sent to your Email Address,<br>
+    	please Submit it below.</p>
+    	<form action="/login" method="post">
+    	<label for="otp">Enter OTP Below:</label><br>
+    	<input type="text" name="otp" id="otp" placeholder="Enter OTP Here" required><br>
+    	<p th:text="${error}" style="color: red; font-style: italic; font-size: 12pt; margin-top: 5px; margin-bottom: -10px">Status</p>
+    	<input type="submit" value="Submit">
+    	</form>
+    	
+    	<a href="/re-send-otp">
+    	<button id="re-send-otp" onclick="reSendOTP()">Re-send OTP</button>
+    	</a>
+   <p id="re-send"></p>
+    </div>
+  </body>
+</html>

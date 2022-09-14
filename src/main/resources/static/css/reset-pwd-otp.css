@@ -1,0 +1,19 @@
+p,label{
+	font-family: cursive;
+	font-size: 16pt;
+}
+
+input[type=text]{
+	height: 20px;
+	width: 100px;
+	margin-top: 8px;
+	margin-bottom:15px;
+}
+
+#invalid{
+	font-size: 15px;
+	font-style: italic;
+	font-family: cursive;
+	color: red;
+	margin-top: -9px;
+}

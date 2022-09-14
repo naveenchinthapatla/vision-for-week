@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Add and Manage Plans</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" th:src="@{/js/features.js}"></script>
+<style type="text/css">
+h2, caption, td{
+font-family: cursive;
+}
+
+#day{
+background-color: MediumSeaGreen;
+}
+
+#plan{
+background-color: DodgerBlue;
+}
+
+button {
+	background-color: green;
+	border-color: green;
+	color: white;
+	font-family: cursive;
+}
+</style>
+</head>
+
+<body>
+<h2>Add and Manage your plans for this week here</h2>
+<button onclick="window.location.href='/getaddpage'">Add/Modify Plans</button>
+<button onclick="window.location.href='/view'">View Plans</button>
+<button onclick="makeSure()">Remove Plans</button>
+<strong th:text="${status}"></strong><br>
+<p><strong>Note: </strong>If you want to remove plan for particular day/days, simply erase data from those fields in the "Add/Modify Plans" page and save.</p>
+
+<table>
+<caption>Your plans for this week</caption>
+<thead>
+<th style="background-color: orange;">Day</th>
+<th style="background-color: orange;">Plan</th>
+</thead>
+
+<tbody>
+<tr>
+<td id="day">Sunday</td>
+<td id="plan" th:text="${sunday}"></td>
+</tr>
+<tr>
+<td id="day">Monday</td>
+<td id="plan" th:text="${monday}"></td>
+</tr>
+<tr>
+<td id="day">Tuesday</td>
+<td id="plan" th:text="${tuesday}"></td>
+</tr>
+<tr>
+<td id="day">Wednesday</td>
+<td id="plan" th:text="${wednesday}"></td>
+</tr>
+<tr>
+<td id="day">Thursday</td>
+<td id="plan" th:text="${thursday}"></td>
+</tr>
+<tr>
+<td id="day">Friday</td>
+<td id="plan" th:text="${friday}"></td>
+</tr>
+<tr>
+<td id="day">Saturday</td>
+<td id="plan" th:text="${saturday}"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<button onclick="window.location.href='/logout'">Logout</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Sign Up - Vision For Week</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/signup-styles.css}">
+    <script type="text/javascript" th:src="@{/js/signup.js}"></script>
+  </head>
+
+  <body>
+    <h1>Sign Up</h1>
+    <!--Sign Up Form Creation-->
+    <div align="center">
+
+      <form action="/otp" method="post" th:object="${user}">
+		
+        <label for="firstName">First Name:</label>
+        <input type="text" th:field="*{firstName}" id="firstName" placeholder="Enter Your First Name Here" required><br>
+        <br>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" th:field="*{lastName}" id="lastName" placeholder="Enter Your Last Name Here" required><br>
+        <br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" th:field="*{email}" id="email" placeholder="Enter Your Email ID Here" required><br>
+        <br>
+        
+        <label for="password">Password:</label>
+        <input type="password" th:field="*{password}" id="password" placeholder="8-16 Characters" required><br>
+        <br>
+        
+        <label for="conPassword">Confirm Password:</label>
+        <input type="password" th:field="*{conPassword}" id="conPassword" placeholder="Same As Above" required><br>
+        
+        
+        <p id="error" th:text="${error}"></p>
+        <!-- Show/Hide Password -->
+        <input type="checkbox" onclick="showPassword()" id="show-pwd">
+        <label for="show-pwd">Show Password</label>
+        
+        <button type="submit">Submit</button>
+		
+      </form>
+
+    </div>
+  </body>
+</html>

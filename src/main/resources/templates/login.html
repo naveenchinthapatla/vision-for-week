@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/css/login-styles.css}">
+<script type="text/javascript" th:src="@{/js/login.js}"></script>
+</head>
+<body>
+<!-- Login Page Heading -->
+<h1>Login Now</h1>
+<!-- Login Form -->
+<div align="center">
+<form action="/login-now" method="post">
+
+<!-- Label for Email ID -->
+<label for="email">Email ID:</label><br>
+<input type="email" th:value="${email}" name="email" id="email" placeholder="Enter Your Email ID Here " required="required"><br><br>
+
+<!-- Label For Password -->
+<label for="password">Password:</label><br>
+<input type="password" maxlength="16" name="password" id="password" placeholder="Enter Your Password Here" required="required"><br><br>
+
+<!-- Incorrect Password -->
+<p th:text=${invalid} id="invalid"></p>
+<!-- Show/Hide Password -->
+<input type="checkbox" id="show-pwd" onclick="showPassword()">
+<label for="show-pwd" id="show-pwd">Show Password</label> <br><br>
+
+<!--Forgot Password -->
+<a href="/reset-password" style="font-family: cursive;">Forgot Password?</a><br>
+
+<!-- Login Button -->
+<input type="submit" value="Login Now">
+</form>
+
+</div>
+</body>
+</html>

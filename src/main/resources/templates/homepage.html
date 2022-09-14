@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Homepage - Vision For Week</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/home-styles.css}">
+    <script type="text/javascript" th:src="@{/js/home.js}"></script>
+  </head>
+
+  <body>
+    <!--Title of the Project-->
+    <h1>Welcome to Vision For Week</h1>
+    <!-- Caption -->
+    <p>Your Plans will Approach you Everyday</p>
+    
+    <!--Redirect to Sign Up Page-->
+    <div class="signup-btn" align="center">
+      <button id="sob" onclick="window.location.href='/signup'">Sign Up</button>
+    </div><br>
+    
+    <!--Redirect to Login Page-->
+    <div class="login-btn" align="center">
+        <button type="button" id="lob" onclick="window.location.href='/login-directly'">Login Now</button>
+      <br>
+    </div>
+    <p id="p"></p>
+  </body>
+</html>

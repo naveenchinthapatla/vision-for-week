@@ -1,0 +1,39 @@
+h1{
+  text-align: center;
+  font-family: cursive;
+}
+
+label {
+	display: inline-block;
+	width: 200px;
+	margin: 10px;
+	text-align: left;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	display: inline-block;
+	width: 200px;
+	border-bottom-style: solid;
+}
+
+button {
+	height: 40px;
+	width: 100px;
+	background-color: #228B22;
+	font-family: cursive;
+	font-size: 14pt;
+	color: white;
+	border-color: #228B22;
+	margin-top: 10px;
+}
+
+#error {
+	font-family: cursive;
+	font-size: 12pt;
+	color: red;
+	font-style: italic;
+}
+
+

@@ -1,0 +1,36 @@
+p{
+	text-align: center;
+	font-family: cursive;
+	font-size: 20pt;
+}
+
+h1{
+  text-align: center;
+  font-family: cursive;
+  font-style: normal;
+  font-size: 30pt;
+  margin-top: 70px;
+  
+}
+
+#sob{
+	background-color: #228B22;
+	color: white;
+	height: 50px;
+	width: 150px;
+	font-size: 16pt;
+	font-family: cursive;
+	margin: 12px;
+	border-color: #228B22;
+}
+
+#lob{
+	background-color: #2196F3;
+	color: white;
+	height: 50px;
+	width: 150px;
+	font-size: 16pt;
+	font-family: cursive;
+	margin: 12px;
+	border-color: #2196F3;
+}

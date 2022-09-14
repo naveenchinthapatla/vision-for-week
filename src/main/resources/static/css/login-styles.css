@@ -1,0 +1,45 @@
+h1{
+	text-align: center;
+	margin-top: 40px;
+	font-family: cursive;
+}
+
+label{
+	font-size: 18pt;
+	font-family: cursive;
+}
+
+#password{
+	height: 30px;
+	width: 200px;
+	border-style: solid;
+}
+
+#email{
+	height: 30px;
+	width: 200px;
+	border-style: solid;
+}
+
+input[type=submit]{
+	font-size: 18pt;
+	margin-top: 20px;
+	width: 180px;
+	height: 40px;
+	background-color: #2196F3;
+	border-color: #2196F3;
+	color: white;
+}
+
+#invalid{
+	margin-top: -9px;
+	font-size: 15px;
+	font-style: italic;
+	font-family: cursive;
+	color: red;
+}
+
+#show-pwd{
+	font-family: cursive;
+	font-size: 12pt;
+}

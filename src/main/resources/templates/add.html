@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Add Plans</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/add.js"></script>
+<style type="text/css">
+h2,p{
+font-family: cursive;
+}
+label{
+	display: inline-block;
+	width: 100px;
+	margin: 10px;
+	text-align: left;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	display: inline-block;
+	width: 800px;
+	border-style: solid;
+}
+
+input[type="submit"]{
+background-color: green;
+border-color: green;
+color: white;
+font-family: cursive;
+}
+</style>
+</head>
+<body onload="displayFields()">
+<h2>Add/Modify your plans</h2>
+<form action="/add" id="addform" method="post">
+<label for="sun">Sunday: </label>
+<input type="text" id="sun" name="sun" placeholder="Write your plans here." th:value="${sunday}"><br>
+<label for="mon">Monday: </label>
+<input type="text" id="mon" name="mon" placeholder="Write your plans here." th:value="${monday}"><br>
+<label for="tue">Tuesday: </label>
+<input type="text" id="tue" name="tue" placeholder="Write your plans here." th:value="${tuesday}"><br>
+<label for="wed">Wednesday: </label>
+<input type="text" id="wed" name="wed" placeholder="Write your plans here." th:value="${wednesday}"><br>
+<label for="thu">Thursday: </label>
+<input type="text" id="thu" name="thu" placeholder="Write your plans here." th:value="${thursday}"><br>
+<label for="fri">Friday: </label>
+<input type="text" id="fri" name="fri" placeholder="Write your plans here." th:value="${friday}"><br>
+<label for="sat">Saturday: </label>
+<input type="text" id="sat" name="sat" placeholder="Write your plans here." th:value="${saturday}"><br>
+<br>
+<input type="submit" id="save" value="Submit/Update">
+</form>
+</body>
+</html>
